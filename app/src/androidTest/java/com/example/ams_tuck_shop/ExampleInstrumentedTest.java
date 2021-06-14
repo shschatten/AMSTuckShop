@@ -1,4 +1,4 @@
-package com.example.amstuckshop;
+package com.example.ams_tuck_shop;
 
 import android.content.Context;
 

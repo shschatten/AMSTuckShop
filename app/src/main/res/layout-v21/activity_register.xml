@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app= "http://schemas.android.com/apk/res-auto"
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
     app:context=".RegisterActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
+        android:background="#9fff"
         android:gravity="center"
-        android:background="#9fff">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
+            android:id="@+id/logo"
             android:layout_width="133dp"
             android:layout_height="120dp"
+            android:layout_marginTop="-150dp"
             android:width="10dp"
             android:height="10dp"
             android:background="@drawable/logo"
@@ -25,6 +29,7 @@
             android:textColor="#000" />
 
         <TextView
+            android:id="@+id/heading"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginBottom="15dp"
@@ -35,36 +40,41 @@
             android:textSize="35sp" />
 
         <TextView
+            android:id="@+id/sign_in_heading"
             android:layout_width="260dp"
             android:layout_height="50dp"
-            android:text="@string/sign_in"
+            android:layout_marginTop="80dp"
             android:fontFamily="sans-serif-thin"
+            android:text="@string/sign_in"
+            android:textColor="#000"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#000"/>
+            android:textStyle="bold" />
 
         <EditText
-            android:layout_width="253dp"
+            android:id="@+id/school_email"
+            android:layout_width="260dp"
             android:layout_height="40dp"
+            android:autofillHints="@string/school_email"
             android:background="@drawable/entry_box"
             android:hint="@string/school_email"
-            android:textColorHint="#9fff"
-            android:autofillHints="@string/school_email"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            android:textColorHint="#9fff" />
 
         <EditText
-            android:layout_width="253dp"
+            android:id="@+id/password"
+            android:layout_width="260dp"
             android:layout_height="40dp"
-            android:background="@drawable/entry_box"
-            android:hint="@string/password"
             android:layout_marginTop="10dp"
-            android:textColorHint="#9fff"
-            android:inputType="text"
-            android:autofillHints="@string/password"/>
+            android:autofillHints="@string/password"
+            android:background="@drawable/entry_box"
+            android:baselineAligned="false"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="#9fff" />
 
         <Button
             android:id="@+id/sign_in_btn"
-            android:layout_width="224dp"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
             android:backgroundTint="@drawable/btn_colour"
@@ -72,4 +82,5 @@
             android:textColor="#000" />
 
     </LinearLayout>
+
 </LinearLayout>
